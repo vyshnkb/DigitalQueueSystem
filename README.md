@@ -6,24 +6,20 @@
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: Byte Blazers
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
-
-### Hosted Project Link
-[mention your project hosted link here]
+- Member 1: Vyshnavi K B - Government Engineering College Idukki
+- Member 2: Revathy Rajesh - Government Engineering College Idukki
 
 ### Project Description
-[2-3 lines about what your project does]
+queue managing system for college canteens
 
 ### The Problem statement
-[What problem are you solving?]
+long queue crowd
 
 ### The Solution
-[How are you solving it?]
-
+by providing token number to each user through digital sysytem
 ---
 
 ## Technical Details
