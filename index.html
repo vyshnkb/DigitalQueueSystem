@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEC Idukki - Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login-container" id="loginPage">
+    <h1 class="college-name">Government Engineering College, Idukki</h1>
+    <p style="text-align: center;">Welcome to the Official Canteen Digital System</p>
+    <center><input type ="text" id="studentName" placeholder="Enter your name" style="width: 150px; height: 25px;">
+    
+    <button onclick="login()">Login</button>
+    <p id="loginError" class="error"></p>
+</div></center>
+<!-- MAIN SYSTEM (HIDDEN INITIALLY) -->
+<div class="container" id="mainPage" style="display:none;">
+    <h1>🍽 Canteen Digital Queue</h1>
+
+    <!-- Display Current Order -->
+    <div id="displayArea" class="display-box">
+        <h2>No Orders Yet</h2>
+    </div>
+
+    <!-- Complete Button -->
+    <button id="completeBtn" onclick="completeOrder()" style="display:none;">
+        Mark as Completed
+    </button>
+
+    <!-- Menu -->
+    <div class="menu-section">
+        <h2>Menu</h2>
+        <label><input type="checkbox" value="Burger"> 🍔 Burger - ₹50</label>
+        <label><input type="checkbox" value="Pizza"> 🍕 Pizza - ₹80</label>
+        <label><input type="checkbox" value="Sandwich"> 🥪 Sandwich - ₹40</label>
+        <label><input type="checkbox" value="Juice"> 🧃 Juice - ₹30</label>
+    </div>
+
+    <!-- Place Order -->
+    <div class="order-section">
+        <h2>Place Order</h2>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button onclick="addToQueue()">Place Order</button>
+    </div>
+
+    <!-- Queue Section -->
+    <div class="queue-section">
+        <h2>Waiting Queue</h2>
+        <ul id="queueList"></ul>
+    </div>
+
+    <!-- Leaderboard -->
+    <h3>🏆 Leaderboard</h3>
+    <ul id="leaderboard"></ul>
+
+    <!-- Spin Wheel -->
+    <div id="spinWheelContainer" style="display:none; margin-top:20px; text-align:center;">
+        <h3>🎡 Spin & Win</h3>
+        <div style="position:relative; display:inline-block;">
+            <canvas id="spinWheel" width="300" height="300" style="border-radius:50%;"></canvas>
+            <div id="wheelPointer" style="position:absolute; top:-10px; left:140px; width:20px; height:30px; background:red; clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"></div>
+        </div>
+        <br>
+        <button id="spinBtn">Spin Now!</button>
+        <p id="spinResult" style="font-size:18px; font-weight:bold; margin-top:10px;"></p>
+    </div>
+</div>
+
+<!-- Confetti canvas -->
+<canvas id="confettiCanvas" style="position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none;"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
